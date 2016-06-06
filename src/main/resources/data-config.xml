@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataConfig>
+	<dataSource type="JdbcDataSource"
+                  driver="com.mysql.jdbc.Driver"
+                  url="jdbc:mysql://172.17.0.2/recap"
+                  user="etl"
+                  password="etl"/>
+
+	<document name="DOC">		
+		<entity name="ITEM"
+                  	query="SELECT IT.BIBLIOGRAPHIC_ID, IT.ITEM_ID, IT.HOLDINGS_ID, IT.BAR_CODE, IST.STATUS_CODE, CGT.COLLECTION_GROUP_CODE,
+			IT.CUSTOMER_CODE, IT.USE_RESTRICTIONS, IT.VOLUME_PART_YEAR, IT.CALL_NUMBER
+			FROM ITEM_T IT, ITEM_STATUS_T IST, COLLECTION_GROUP_T CGT 
+			WHERE IT.ITEM_AVAIL_STATUS_ID = IST.ITEM_STATUS_ID AND IT.COLLECTION_GROUP_ID = CGT.COLLECTION_GROUP_ID"
+			transformer="ItemContentTransformer">
+			<field column="ITEM_ID" name="ItemId"/>
+			<field column="BAR_CODE" name="Barcode"/>
+			<field column="STATUS_CODE" name="Availability"/>
+			<field column="COLLECTION_GROUP_CODE" name="CollectionGroupDesignation"/>
+			<field column="CUSTOMER_CODE" name="CustomerCode"/>
+			<field column="USE_RESTRICTIONS" name="UseRestriction"/>
+			<field column="VOLUME_PART_YEAR" name="VolumePartYear"/>
+			<field column="CALL_NUMBER" name="CallNumber"/>
+
+			<entity name="HOLDINGS"
+				query="SELECT HOLDINGS_ID, CONVERT(CONTENT USING utf8) AS HOLDINGS_CONTENT FROM HOLDINGS_T
+				WHERE HOLDINGS_ID = ${ITEM.HOLDINGS_ID}"
+				transformer="HoldingsContentTransformer">
+				<field column="HOLDINGS_ID" name="HoldingsId"/>
+			</entity>
+			<entity name="BIB_ITEM"
+				query="SELECT BIBLIOGRAPHIC_ID FROM BIBLIOGRAPHIC_ITEM_T
+				WHERE ITEM_ID = ${ITEM.ITEM_ID}">
+				<field column="BIBLIOGRAPHIC_ID" name="BibId"/>
+			</entity>
+	        </entity>
+
+		<entity name="BIBLIOGRAPHIC"
+			query="SELECT BIBLIOGRAPHIC_ID, INSTITUTION_CODE, CONVERT(CONTENT USING utf8) AS BIB_CONTENT 
+			FROM BIBLIOGRAPHIC_T BT, INSTITUTION_T IT
+            		WHERE BT.OWNING_INST_ID = IT.INSTITUTION_ID"
+			transformer="BibContentTransformer">
+			<field column="BIBLIOGRAPHIC_ID" name="BibId"/>
+			<field column="INSTITUTION_CODE" name="OwningInstitution"/>
+			
+			<entity name="HOLDINGS"
+				query="SELECT HOLDINGS_ID FROM HOLDINGS_T 
+					WHERE BIBLIOGRAPHIC_ID = ${BIBLIOGRAPHIC.BIBLIOGRAPHIC_ID}">
+				<field column="HOLDINGS_ID" name="HoldingsId"/>
+			</entity>
+			<entity name="BIB_ITEM"
+				query="SELECT ITEM_ID FROM BIBLIOGRAPHIC_ITEM_T
+				WHERE BIBLIOGRAPHIC_ID = ${BIBLIOGRAPHIC.BIBLIOGRAPHIC_ID}">
+				<field column="ITEM_ID" name="ItemId"/>
+			</entity>
+		</entity>
+	</document>
+
+</dataConfig>
