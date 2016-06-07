@@ -18,8 +18,6 @@ public class BibContentTransformer extends ContentTransformer {
     private static final Logger LOG = LoggerFactory.getLogger(BibContentTransformer.class);
 
     public Object transformRow(Map<String, Object> row) {
-    System.out.println("Inside Transform Row method");
-    LOG.info("Inside Tranform row method");
         try {
             row.put("DocType", "Bibliographic");
             String bibContent = (String) row.get("BIB_CONTENT");
@@ -72,7 +70,7 @@ public class BibContentTransformer extends ContentTransformer {
         } catch (Exception e) {
             LOG.error("Exception " + e);
         }
-        LOG.info("Returning row");
+        
         return row;
     }
 
