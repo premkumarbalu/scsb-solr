@@ -12,7 +12,7 @@
 			IT.CUSTOMER_CODE, IT.USE_RESTRICTIONS, IT.VOLUME_PART_YEAR, IT.CALL_NUMBER
 			FROM ITEM_T IT, ITEM_STATUS_T IST, COLLECTION_GROUP_T CGT 
 			WHERE IT.ITEM_AVAIL_STATUS_ID = IST.ITEM_STATUS_ID AND IT.COLLECTION_GROUP_ID = CGT.COLLECTION_GROUP_ID"
-			transformer="tansformers.ItemContentTransformer">
+			transformer="transformers.ItemContentTransformer">
 			<field column="ITEM_ID" name="ItemId"/>
 			<field column="BAR_CODE" name="Barcode"/>
 			<field column="STATUS_CODE" name="Availability"/>
@@ -25,7 +25,7 @@
 			<entity name="HOLDINGS"
 				query="SELECT HOLDINGS_ID, CONVERT(CONTENT USING utf8) AS HOLDINGS_CONTENT FROM HOLDINGS_T
 				WHERE HOLDINGS_ID = ${ITEM.HOLDINGS_ID}"
-				transformer="tansformers.HoldingsContentTransformer">
+				transformer="transformers.HoldingsContentTransformer">
 				<field column="HOLDINGS_ID" name="HoldingsId"/>
 			</entity>
 			<entity name="BIB_ITEM"
@@ -39,7 +39,7 @@
 			query="SELECT BIBLIOGRAPHIC_ID, INSTITUTION_CODE, CONVERT(CONTENT USING utf8) AS BIB_CONTENT 
 			FROM BIBLIOGRAPHIC_T BT, INSTITUTION_T IT
             		WHERE BT.OWNING_INST_ID = IT.INSTITUTION_ID"
-			transformer="tansformers.BibContentTransformer">
+			transformer="transformers.BibContentTransformer">
 			<field column="BIBLIOGRAPHIC_ID" name="BibId"/>
 			<field column="INSTITUTION_CODE" name="OwningInstitution"/>
 			
