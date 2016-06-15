@@ -1022,7 +1022,8 @@
     <field name="HoldingsId" type="text_general" indexed="true" stored="true" multiValued="true"/>
 
     <!--Item-->
-    <field name="BibId" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="BibId" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemBibId" type="text_general" indexed="true" stored="true" multiValued="true"/>
     <field name="ItemId" type="text_general" indexed="true" stored="true" multiValued="true"/>
     <field name="Barcode" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Availability" type="text_general" indexed="true" stored="true" multiValued="false"/>
