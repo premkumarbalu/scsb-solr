@@ -1016,6 +1016,7 @@
     <field name="Notes" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="LCCN" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Imprint" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibItemId" type="text_general" indexed="true" stored="true" multiValued="true"/>
 
     <!--Holdings-->
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
@@ -1024,7 +1025,7 @@
     <!--Item-->
     <field name="BibId" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemBibId" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="ItemId" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="ItemId" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Barcode" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Availability" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="CollectionGroupDesignation" type="text_general" indexed="true" stored="true" multiValued="false"/>
