@@ -1002,38 +1002,38 @@
 
     <!-- Recap Fields -->
     <!--Bibliographic-->
-    <field name="OwningInstitution" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
+    <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Title" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Author" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Publisher" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="PublicationPlace" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="PublicationDate" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Subject" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="ISBN" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="ISSN" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="OCLCNumber" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="MaterialType" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Publisher" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="PublicationPlace" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="PublicationDate" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="Subject" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="ISBN" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="ISSN" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="OCLCNumber" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="MaterialType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Notes" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="LCCN" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="LCCN" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Imprint" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="BibItemId" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="OwningInstitutionBibId" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibItemId" type="int" indexed="true" stored="true" multiValued="true"/>
+    <field name="OwningInstitutionBibId" type="string" indexed="true" stored="true" multiValued="false"/>
 
     <!--Holdings-->
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="HoldingsId" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="HoldingsId" type="string" indexed="true" stored="true" multiValued="true"/>
 
     <!--Item-->
-    <field name="BibId" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="ItemBibId" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="ItemId" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Barcode" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Availability" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="CollectionGroupDesignation" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="DocType" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="CustomerCode" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="UseRestriction" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemBibId" type="int" indexed="true" stored="true" multiValued="true"/>
+    <field name="ItemId" type="int" indexed="true" stored="true" multiValued="false"/>
+    <field name="Barcode" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="Availability" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="CollectionGroupDesignation" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="DocType" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="CustomerCode" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="UseRestriction" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="VolumePartYear" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="CallNumber" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="CallNumber" type="string" indexed="true" stored="true" multiValued="false"/>
 
 </schema>
