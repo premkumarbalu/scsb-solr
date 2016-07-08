@@ -1022,7 +1022,7 @@
 
     <!--Holdings-->
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="HoldingsId" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="HoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
 
     <!--Item-->
     <field name="ItemBibId" type="int" indexed="true" stored="true" multiValued="true"/>
