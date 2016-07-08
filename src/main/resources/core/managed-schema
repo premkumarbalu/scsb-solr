@@ -1017,6 +1017,7 @@
     <field name="LCCN" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Imprint" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="BibItemId" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="OwningInstitutionBibId" type="text_general" indexed="true" stored="true" multiValued="false"/>
 
     <!--Holdings-->
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
