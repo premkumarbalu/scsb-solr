@@ -1019,6 +1019,7 @@
     <field name="Imprint" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="BibItemId" type="int" indexed="true" stored="true" multiValued="true"/>
     <field name="OwningInstitutionBibId" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="LeaderMaterialType" type="string" indexed="true" stored="true" multiValued="false"/>
 
     <!--Holdings-->
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
