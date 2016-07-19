@@ -99,7 +99,7 @@
        replication is in use, this should match the replication
        configuration.
     -->
-  <dataDir>/recap-vol/solr-dev-data</dataDir>
+  <dataDir>/var/data/solr</dataDir>
 
 
   <!-- The DirectoryFactory to use for indexes.
