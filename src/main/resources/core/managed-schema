@@ -1004,7 +1004,8 @@
     <!--Bibliographic-->
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="Title" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Title_search" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Title_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Author" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Publisher" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="PublicationPlace" type="text_general" indexed="true" stored="true" multiValued="false"/>
