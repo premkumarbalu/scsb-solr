@@ -1000,12 +1000,31 @@
      </similarity>
     -->
 
+    <!-- Recap Configuration -->
+    <fieldType name="text_partial" class="solr.TextField" positionIncrementGap="100" multiValued="true">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.SuggestStopFilterFactory" ignoreCase="true"
+              words="stopwords.txt" format="wordset"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.NGramFilterFactory" minGramSize="2" maxGramSize="25"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.SuggestStopFilterFactory" ignoreCase="true"
+               words="stopwords.txt" format="wordset"/>
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.NGramFilterFactory" minGramSize="2" maxGramSize="25"/>
+       </analyzer>
+    </fieldType>
+
     <!-- Recap Fields -->
     <!--Bibliographic-->
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_search" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Title_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Title_display" type="text_partial" indexed="true" stored="true" multiValued="false"/>
     <field name="TitleStartsWith" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Author_search" type="text_general" indexed="true" stored="true" multiValued="true"/>
     <field name="Author_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
