@@ -1062,10 +1062,11 @@
     <field name="BibItemId" type="int" indexed="true" stored="true" multiValued="true"/>
     <field name="OwningInstitutionBibId" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="LeaderMaterialType" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
 
     <!--Holdings-->
+    <field name="HoldingId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="HoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
     <field name="OwningInstHoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
 
     <!--Item-->
