@@ -1494,7 +1494,7 @@
       <bool name="enabled">true</bool>
       <str name="signatureField">id</str>
       <bool name="overwriteDupes">true</bool>
-      <str name="fields">ItemId,HoldingsId,BibId</str>
+      <str name="fields">ItemId,HoldingId,BibId</str>
       <str name="signatureClass">solr.processor.Lookup3Signature</str>
     </processor>
     <processor class="solr.LogUpdateProcessorFactory" />
