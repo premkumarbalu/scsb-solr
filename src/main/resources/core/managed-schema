@@ -1039,6 +1039,13 @@
         </analyzer>
     </fieldType>
 
+    <fieldType name="string_ignorecase" class="solr.TextField" positionIncrementGap="100">
+        <analyzer type="query">
+            <tokenizer class="solr.KeywordTokenizerFactory"/>
+            <filter class="solr.LowerCaseFilterFactory"/>
+        </analyzer>
+    </fieldType>
+
     <!-- Recap Fields -->
     <!--Bibliographic-->
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
@@ -1078,7 +1085,7 @@
     <field name="CollectionGroupDesignation" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="DocType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="CustomerCode" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="UseRestriction" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="UseRestriction" type="string_ignorecase" indexed="true" stored="true" multiValued="false"/>
     <field name="VolumePartYear" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="CallNumber" type="text_general" indexed="true" stored="true" multiValued="false"/>
 
