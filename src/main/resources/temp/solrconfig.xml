@@ -181,10 +181,6 @@
          If the updateLog is enabled, then it's highly recommended to
          have some sort of hard autoCommit to limit the log size.
       -->
-    <autoCommit>
-      <maxTime>${solr.autoCommit.maxTime:15000}</maxTime>
-      <openSearcher>false</openSearcher>
-    </autoCommit>
 
     <!-- softAutoCommit is like autoCommit except it causes a
          'soft' commit which only ensures that changes are visible
@@ -567,7 +563,7 @@ related headers
       <bool name="enabled">true</bool>
       <str name="signatureField">id</str>
       <bool name="overwriteDupes">true</bool>
-      <str name="fields">ItemId,BibId</str>
+      <str name="fields">ItemId,HoldingId,BibId</str>
       <str name="signatureClass">solr.processor.Lookup3Signature</str>
     </processor>
     <processor class="solr.LogUpdateProcessorFactory" />
