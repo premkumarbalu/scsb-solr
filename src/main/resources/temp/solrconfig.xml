@@ -306,6 +306,65 @@
       -->
     <queryResultMaxDocsCached>200</queryResultMaxDocsCached>
 
+    <!-- Query Related Event Listeners
+
+         Various IndexSearcher related events can trigger Listeners to
+         take actions.
+
+         newSearcher - fired whenever a new searcher is being prepared
+         and there is a current searcher handling requests (aka
+         registered).  It can be used to prime certain caches to
+         prevent long request times for certain requests.
+
+         firstSearcher - fired whenever a new searcher is being
+         prepared but there is no current registered searcher to handle
+         requests or to gain autowarming data from.
+
+
+      -->
+    <!-- QuerySenderListener takes an array of NamedList and executes a
+         local query request for each NamedList in sequence.
+      -->
+    <listener event="newSearcher" class="solr.QuerySenderListener">
+      <arr name="queries">
+        <!--
+           <lst><str name="q">solr</str><str name="sort">price asc</str></lst>
+           <lst><str name="q">rocks</str><str name="sort">weight asc</str></lst>
+          -->
+        <lst>
+          <str name="q">*:*</str>
+          <str name="sort">Title_sort asc</str>
+          <str name="start">0</str>
+          <str name="rows">10</str>
+          <str name="facet">true</str>
+          <str name="facet.limit">10</str>
+          <str name="facet.mincount">2</str>
+          <str name="facet.field">OCLCNumber</str>
+          <str name="facet.field">ISBN</str>
+          <str name="facet.field">ISSN</str>
+          <str name="facet.field">LCCN</str>
+        </lst>
+      </arr>
+    </listener>
+
+    <listener event="firstSearcher" class="solr.QuerySenderListener">
+      <arr name="queries">
+        <lst>
+          <str name="q">*:*</str>
+          <str name="sort">Title_sort asc</str>
+          <str name="start">0</str>
+          <str name="rows">10</str>
+          <str name="facet">true</str>
+          <str name="facet.limit">10</str>
+          <str name="facet.mincount">2</str>
+          <str name="facet.field">OCLCNumber</str>
+          <str name="facet.field">ISBN</str>
+          <str name="facet.field">ISSN</str>
+          <str name="facet.field">LCCN</str>
+        </lst>
+      </arr>
+    </listener>
+
     <!-- Use Cold Searcher
 
          If a search request comes in and there is no current

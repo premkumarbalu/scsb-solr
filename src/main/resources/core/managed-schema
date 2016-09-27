@@ -1051,12 +1051,12 @@
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_search" type="text_diacritics" indexed="true" stored="true" multiValued="false"/>
-    <field name="Title_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Title_display" type="text_general" indexed="false" stored="true" multiValued="false"/>
     <field name="TitleStartsWith" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_sort" type="NISOSort" indexed="true" stored="true" multiValued="false"/>
-    <field name="Author_search" type="text_general" indexed="true" stored="true" multiValued="true"/>
-    <field name="Author_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="Publisher" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="Author_search" type="text_diacritics" indexed="true" stored="true" multiValued="true"/>
+    <field name="Author_display" type="text_general" indexed="false" stored="true" multiValued="false"/>
+    <field name="Publisher" type="text_diacritics" indexed="true" stored="true" multiValued="false"/>
     <field name="PublicationPlace" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="PublicationDate" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Subject" type="text_general" indexed="true" stored="true" multiValued="false"/>
