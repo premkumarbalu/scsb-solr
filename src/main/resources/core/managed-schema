@@ -1017,7 +1017,7 @@
         </analyzer>
     </fieldType>
 
-    <fieldType name="text_icu" class="solr.TextField" positionIncrementGap="100">
+    <fieldType name="text_diacritics" class="solr.TextField" positionIncrementGap="100">
         <analyzer type="index">
             <tokenizer class="solr.ICUTokenizerFactory"/>
             <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="0" splitOnNumerics="0"/>
@@ -1039,7 +1039,7 @@
         </analyzer>
     </fieldType>
 
-    <fieldType name="string_ignorecase" class="solr.TextField" positionIncrementGap="100">
+    <fieldType name="text_lowercase" class="solr.TextField" positionIncrementGap="100">
         <analyzer type="query">
             <tokenizer class="solr.KeywordTokenizerFactory"/>
             <filter class="solr.LowerCaseFilterFactory"/>
@@ -1050,7 +1050,7 @@
     <!--Bibliographic-->
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="Title_search" type="text_icu" indexed="true" stored="true" multiValued="false"/>
+    <field name="Title_search" type="text_diacritics" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_display" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="TitleStartsWith" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_sort" type="NISOSort" indexed="true" stored="true" multiValued="false"/>
@@ -1085,7 +1085,7 @@
     <field name="CollectionGroupDesignation" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="DocType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="CustomerCode" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="UseRestriction" type="string_ignorecase" indexed="true" stored="true" multiValued="false"/>
+    <field name="UseRestriction" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
     <field name="VolumePartYear" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="CallNumber" type="text_general" indexed="true" stored="true" multiValued="false"/>
 
