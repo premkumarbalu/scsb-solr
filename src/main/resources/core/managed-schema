@@ -1047,7 +1047,6 @@
     </fieldType>
 
     <!-- Recap Fields -->
-    <field name="_root_" type="string" indexed="true" stored="true" multiValued="false" required="false"/>
     <!--Bibliographic-->
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
