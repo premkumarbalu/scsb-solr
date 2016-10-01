@@ -1048,6 +1048,7 @@
 
     <!-- Recap Fields -->
     <!--Bibliographic-->
+    <field name="ContentType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="BibId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="BibOwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="Title_search" type="text_diacritics" indexed="true" stored="true" multiValued="false"/>
