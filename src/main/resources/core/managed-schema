@@ -1083,11 +1083,13 @@
     <field name="ItemBibId" type="int" indexed="true" stored="true" multiValued="true"/>
     <field name="ItemId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="Barcode" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="Availability" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="Availability_search" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="Availability_display" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="CollectionGroupDesignation" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="DocType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="CustomerCode" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="UseRestriction" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
+    <field name="UseRestriction_search" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
+    <field name="UseRestriction_display" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
     <field name="VolumePartYear" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="CallNumber" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemOwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
