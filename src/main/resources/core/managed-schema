@@ -1091,7 +1091,8 @@
     <field name="UseRestriction_search" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
     <field name="UseRestriction_display" type="text_lowercase" indexed="true" stored="true" multiValued="false"/>
     <field name="VolumePartYear" type="text_general" indexed="true" stored="true" multiValued="false"/>
-    <field name="CallNumber" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="CallNumber_search" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="CallNumber_display" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemOwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
 
 </schema>
