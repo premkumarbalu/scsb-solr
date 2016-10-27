@@ -1072,12 +1072,20 @@
     <field name="OwningInstitutionBibId" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="LeaderMaterialType" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="BibHoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
+    <field name="BibCreatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
 
     <!--Holdings-->
     <field name="HoldingId" type="int" indexed="true" stored="true" multiValued="false"/>
     <field name="SummaryHoldings" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="OwningInstHoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
     <field name="HoldingsOwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsCreatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
 
     <!--Item-->
     <field name="ItemBibId" type="int" indexed="true" stored="true" multiValued="true"/>
@@ -1094,5 +1102,10 @@
     <field name="CallNumber_search" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="CallNumber_display" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemOwningInstitution" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="CopyNumber" type="string" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemCreatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
+    <field name="ItemLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
 
 </schema>
