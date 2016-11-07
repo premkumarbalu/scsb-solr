@@ -1076,6 +1076,7 @@
     <field name="BibCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="BibLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="BibLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="IsDeletedBib" type="boolean" indexed="true" stored="true" multiValued="false"/>
 
     <!--Holdings-->
     <field name="HoldingId" type="int" indexed="true" stored="true" multiValued="false"/>
@@ -1086,6 +1087,7 @@
     <field name="HoldingsCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="HoldingsLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="HoldingsLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="IsDeletedHoldings" type="boolean" indexed="true" stored="true" multiValued="false"/>
 
     <!--Item-->
     <field name="ItemBibId" type="int" indexed="true" stored="true" multiValued="true"/>
@@ -1107,5 +1109,6 @@
     <field name="ItemCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="IsDeletedItem" type="boolean" indexed="true" stored="true" multiValued="false"/>
 
 </schema>
