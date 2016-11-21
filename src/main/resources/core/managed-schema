@@ -1110,5 +1110,6 @@
     <field name="ItemLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="ItemLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="IsDeletedItem" type="boolean" indexed="true" stored="true" multiValued="false"/>
+    <field name="HoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
 
 </schema>
