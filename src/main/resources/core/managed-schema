@@ -1077,6 +1077,7 @@
     <field name="BibLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="BibLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="IsDeletedBib" type="boolean" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibCatalogingStatus" type="string" indexed="true" stored="true" multiValued="true"/>
 
     <!--Holdings-->
     <field name="HoldingId" type="int" indexed="true" stored="true" multiValued="false"/>
@@ -1111,5 +1112,6 @@
     <field name="ItemLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="IsDeletedItem" type="boolean" indexed="true" stored="true" multiValued="false"/>
     <field name="HoldingsId" type="int" indexed="true" stored="true" multiValued="true"/>
+    <field name="ItemCatalogingStatus" type="string" indexed="true" stored="true" multiValued="true"/>
 
 </schema>
