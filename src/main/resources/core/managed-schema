@@ -1076,6 +1076,8 @@
     <field name="BibCreatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="BibLastUpdatedBy" type="text_general" indexed="true" stored="true" multiValued="false"/>
     <field name="BibLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibHoldingLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
+    <field name="BibItemLastUpdatedDate" type="date" indexed="true" stored="true" multiValued="false"/>
     <field name="IsDeletedBib" type="boolean" indexed="true" stored="true" multiValued="false"/>
     <field name="BibCatalogingStatus" type="string" indexed="true" stored="true" multiValued="false"/>
 
