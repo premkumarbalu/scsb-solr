@@ -319,6 +319,12 @@
          faster and more near-realtime friendly than a hard commit.
       -->
 
+    <autoCommit>
+      <maxDocs>10000</maxDocs>
+      <maxTime>10000</maxTime>
+      <openSearcher>false</openSearcher>
+    </autoCommit>
+
     <autoSoftCommit>
       <maxTime>${solr.autoSoftCommit.maxTime:-1}</maxTime>
     </autoSoftCommit>
